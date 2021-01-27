@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocate</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+ <header class="header">
+    <div class="row">
+        <div class="logo">
+            <img src="./img/logo.svg" alt="logo">
+        </div>
+        <div class="social">
+            <a href="#" id="facebook-icon">
+                <img src="./img/fb-icon.svg" alt="facebook">
+            </a>
+        </div>
+    </div>
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="row content__row">
+        <ul class="menu menu-mobile">
+            <li class="menu__item active__tabs active" data-tab="1">
+                <a href="#home">
+                    <span>01</span>
+                    <div></div>
+                    <span>Головна</span>
+                </a>
+            </li>
+            <li class="menu__item active__tabs" id="about" data-tab="2">
+                <a href="#about">
+                    <span>02</span>
+                    <div></div>
+                    <span>Про адвоката</span>
+                </a>
+            </li>
+            <li class="menu__item active__tabs" data-tab="3">
+                <a href="#services">
+                    <span>03</span>
+                    <div></div>
+                    <span>Послуги</span>
+                </a>	
+            </li>
+            <li class="menu__item active__tabs" data-tab="4">
+                <a href="#client">
+                    <span>04</span>
+                    <div></div>
+                    <span>Відгуки</span>
+                </a>
+            </li>
+            <li class="menu__item active__tabs" data-tab="5">
+                <a href="#contact">
+                    <span>05</span>
+                    <div></div>
+                    <span>Контакти</span>
+                </a>		
+            </li>
+        </ul>
+        <ul class="tabs">
+            <li data-tab="1" class="tab__item fadeInRight active" id="home">
+                <div class="header__offer content">
+                    <img src="./img/image2vector.svg" alt="logo">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    </p>
+                </div>
+            </li>
+            <li data-tab="2" class="tab__item fadeInRight" id="about">
+                <div class="about__content content">
+                    <div class="about__info">
+                        <div class="about__author">
+                            <img src="img/photo_2021-01-19_13-39-07.jpg" alt="photo">
+                        </div>
+                        <div>
+                            <h2 class="title__content">
+                                About
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li data-tab="3" class="tab__item fadeInRight" id="services">
+                <div class="services__content content">
+                    <h2 class="title__content">
+                            Services
+                    </h2>
+                    <div class="services__table">
+                        <table>
+                            <tbody><tr class="services__table_first">
+                                <th>Client</th>
+                                <td class="subtitle">C-suite executives</td>
+                                <td class="subtitle">PE investors</td>
+                                <td class="subtitle">SME owners</td>
+                            </tr>
+                            <tr class="services__table_second">
+                                <th>Focus areas</th>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            Strategic renewal
+                                        </li>
+                                        <li>
+                                            Business performance improvements 
+                                        </li>
+                                        <li>
+                                            Operational improvements
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            Deal sourcing 
+                                        </li>
+                                        <li>
+                                            Deal feasibility assessment 
+                                        </li>
+                                        <li>
+                                            Post-transaction advisory work
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            Strategic advisory and board work 
+                                        </li>
+                                        <li>
+                                            Preparatory assistance prior to a sale or exit
+                                        </li>
+                                        <li>
+                                            Post-transaction advisory work
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="services__table_third">
+                                <th>Reference clients</th>
+                                <td>
+                                    <p>Lorem ipsum</p>
+                                </td>
+                                <td>
+                                    <p>Lorem ipsum</p>
+                                </td>
+                                <td>
+                                    <p>Lorem ipsum</p>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+            </li>
+            <li data-tab="4" class="tab__item fadeInRight" id="client">
+                <div class="client__content content">
+                    <h2 class="title__content">
+                        Client testimonials
+                    </h2>
+                    <h3>
+                        Market feasibility study for a large scale investment
+                    </h3>
+                    <div class="client__text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li data-tab="5" class="tab__item fadeInRight" id="contact">
+                <div class="footer__content content">
+                    <h1>
+                        Aleksandra Petryk 
+                    </h1>
+                    
+                    <ul class="footer__contact">
+                        <li>
+                            Contact:  
+                            <a href="#">
+                                example@mail.com
+                            </a>
+                        </li>
+                        <li>
+                            For more strategic insights make sure to subscribe to 
+                            <a href="#">
+                                L&amp;L publication.
+                            </a> 
+                        </li>
+                        <li>
+                            Phone: 
+                            <a href="#"> +245 123 353252</a>
+                        </li>
+                        <li class="footer__social">
+                            Social: 
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+ </header>  
+ <script src="./index.js"></script> 
+</body>
+</html>
