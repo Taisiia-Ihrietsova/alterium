@@ -1,4 +1,9 @@
 // Tabs switching
+
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+let menuItem = document.querySelectorAll('.menu__item');
+
 let tabsTrigger = document.querySelectorAll(".active__tabs");
 tabsTrigger.forEach(function (trigger) {
     trigger.addEventListener("click", function () {
@@ -19,6 +24,31 @@ const changeTab = (id, nextElement) => {
 };
 
 
+//BURGER
+
+
+
+burger.onclick = function() {
+    if (burger.classList.contains("open")) {
+        burger.classList.remove("open");  
+        menu.classList.add("menu-mobile")
+    } else {
+        burger.classList.add("open");
+        menu.classList.remove("menu-mobile");
+    }
+  };
+
+menuItem.forEach(el => {
+    el.onclick = function() {
+        el.classList.add('active');
+        if(burger.classList.contains('open')) {
+            menu.classList.add('menu-mobile');
+            burger.classList.remove('open');
+        }
+    }
+})
+
+
 //  // menu
 //  $('.burger').click(function () {
 //     $(this).toggleClass('open');
@@ -34,13 +64,3 @@ const changeTab = (id, nextElement) => {
 //     }
 // });
 
-
-// // cookie
-// let cookie = $.cookie('cookie')
-//     if(cookie =='none'){
-//         $('#cookie').remove(); 
-//     } 
-//     $('.cookie__btn').click(function() { 
-//         $('#cookie').slideUp(700);
-//         $.cookie('cookie', 'none', { expires: 7});
-// });   

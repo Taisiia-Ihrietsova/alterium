@@ -5,8 +5,6 @@ body {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
-    overflow-x: hidden;
-    width: 1200px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,6 +14,7 @@ a {
 
 .header {
     padding: 0 60px;
+    max-width: 1200px;
 }
 
 .logo {
@@ -224,6 +223,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul, li, a {
     display: block;
     margin: 0 auto;
     width: 46em;
+    max-width: 100%;
 }
 
 .header__offer p {
@@ -360,9 +360,8 @@ h1, h2, h3, h4, h5, h6, p, span, ul, li, a {
 
 
 
-/**/
-
-@media screen and (min-width: 1201px) {
+/* --- RESPONSIVE --- */
+ @media screen and (min-width: 1201px) {
 	.tab__item {
 			-webkit-animation-duration: 1s;
 		animation-duration: 1s;
@@ -427,66 +426,6 @@ h1, h2, h3, h4, h5, h6, p, span, ul, li, a {
 	}
 }
 
-@media screen and (max-width: 768px) {
-	.container {
-		max-width: 100%;
-		padding: 0 20px;
-	}
-	.header__offer h1, .footer__content h1 {
-		font-size: 50px;
-	}
-	.header__offer p, .footer__content p {
-		font-size: 20px;
-		max-width: 370px;
-	}
-	.services__table tbody {
-		overflow-x: hidden;
-	}
-	.header__offer a {
-		width: 160px;
-	}
-	.footer__contact li {
-		font-size: 16px;
-		margin-bottom: 15px;
-	}
-}
-@media screen and (max-width: 576px) {
-	.process__item {
-		padding-top: 25px;
-	}
-	.process__item h3, .client__content h3 {
-		font-size: 18px;
-	}
-	.about__content, .process__item {
-		flex-wrap: wrap;
-	}
-	.about__content > div, .process__item h3, .process__item ul {
-		width: 100%;
-	}
-	.process__item ul {
-		padding-left: 1em;
-	}
-	.about__author {
-		margin-left: 0;
-		margin-top: 50px;
-		text-align: center;
-	}
-	.title__content {
-		font-size: 30px;
-	}
-	.services__table table {
-		margin-top: 40px;
-	}
-	.client__content h3 {
-		margin: 35px 0 15px;
-	}
-	.client__content p {
-		line-height: 1.55;
-	}
-}
-
-
-
 
          
 @-webkit-keyframes fadeInRight {
@@ -515,4 +454,4 @@ h1, h2, h3, h4, h5, h6, p, span, ul, li, a {
    -webkit-animation-name: fadeInRight;
    animation-name: fadeInRight;
 }
-        
+         
