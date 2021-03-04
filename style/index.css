@@ -327,6 +327,7 @@ a {
     margin: 0 auto;
     padding: 2rem;
     max-width: 48rem;
+    font-family: sans-serif;
 }
 
 .accordion .accordion-item {
@@ -349,6 +350,7 @@ a {
     border: none;
     background: none;
     outline: none;
+    padding-right: 20px;
 }
 
 .accordion-item p {
@@ -619,22 +621,49 @@ a {
 
 @media (max-width: 450px) {
     .about__author img {
-        max-width: 15rem;
+        max-width: 12rem;
+        margin-bottom: 0;
+    }
+    .logo img {
+        height: 4rem;
     }
     .title__content {
         margin-top: 50px;
-        font-size: 25px;
+        font-size: 22px;
     }
     .about__info p {
-        font-size: 13px;
-        margin: 35px;
+        font-size: 12px;
+        margin: 34px;
+        text-align: center;
+    }
+    .about__info {
+        height: 48rem;
     }
     .accordion-container {
         margin: 30px;
     }
+    .accordion-title,
+    .accordion-item p {
+        font-size: 16px;
+    }
+    .accordion .accordion-content p {
+        font-size: 14px;
+    }
     .services__content {
         height: 45rem;
         padding-top: 0;
+    }
+    .social img {
+        height: 25px;
+    }
+    .header__offer p {
+        font-size: 20px;
+    }
+    .header__offer img {
+        margin-top: 0px;
+    }
+    .header__offer {
+        height: 40rem;
     }
 }
 
