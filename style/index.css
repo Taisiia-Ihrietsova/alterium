@@ -466,24 +466,16 @@ a {
 
 /* END ACORDION LIST */
 
-.client__text p {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    font-size: 14.5px;
-    line-height: 1.85;
-}
-
 .footer__content {
     max-width: 660px;
 }
 
 .footer__content h1 {
-    font-size: 57px;
+    font-size: 50px;
 }
 
 .footer__contact {
-    max-width: 450px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .footer__contact a {
@@ -493,6 +485,10 @@ a {
 .footer__contact li {
     margin-bottom: 30px;
     font-size: 20px;
+}
+
+.footer__contact-text {
+    color: rgb(201, 196, 196);
 }
 
 .fab {
@@ -516,6 +512,35 @@ a {
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
+}
+
+
+/*Client content*/
+
+.client__text {
+    overflow: auto;
+    max-height: 22em;
+    line-height: 24px;
+    margin-top: 30px;
+}
+
+.client__text li {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    font-size: 14.5px;
+    line-height: 1.85;
+}
+
+.client__text::-webkit-scrollbar {
+    width: 10px;
+}
+
+.client__text::-webkit-scrollbar-thumb {
+    background: #a57f38;
+}
+
+.client__text::-webkit-scrollbar-track {
+    background: #666;
 }
 
 
@@ -616,6 +641,16 @@ a {
     .services__content {
         height: 45rem;
         padding-top: 100px;
+    }
+    .client__content {
+        margin: 50px;
+    }
+    .footer__content {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer__contact iframe {
+        margin: 30px auto;
     }
 }
 
