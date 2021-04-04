@@ -271,11 +271,12 @@ a {
 
 .header__offer p {
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 22px;
     max-width: 470px;
     text-align: center;
     color: rgb(190, 186, 181);
     font-weight: 300;
+    font-family: 'Alegreya Sans SC', sans-serif;
 }
 
 .title__content {
@@ -644,11 +645,18 @@ a {
     }
     .client__content {
         margin: 50px;
+        padding: 12vh 0;
     }
     .footer__content {
         margin: 0 auto;
         text-align: center;
+        padding: 0 30px;
     }
+
+    .footer__content h1 {
+        font-size: 30px;
+    }
+
     .footer__content iframe {
         margin: 30px auto;
     }
