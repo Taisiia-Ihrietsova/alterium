@@ -1,11 +1,12 @@
 body {
     background: #000;
     margin: 0 auto;
-    padding: 3em;
+    padding: 0 3%;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -18,12 +19,18 @@ a {
 }
 
 .header {
-    padding: 0 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
 }
 
 header .row {
     display: flex;
     justify-content: space-between;
+    width: 97%;
+    margin: 16px;
 }
 
 
@@ -45,14 +52,14 @@ header .row {
 }
 
 .social img {
-    height: 36px;
+    height: 26px;
 }
 
 
 /*Left header*/
 
 .logo img {
-    height: 6rem;
+    height: 2rem;
 }
 
 
@@ -139,10 +146,17 @@ header .row {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    position: relative;
     transition: all 0.5s ease;
     width: 25%;
     min-width: 15em;
+    position: fixed;
+    top: 100px;
+    z-index: 10;
+}
+
+.tabs {
+    margin-left: 200px;
+    margin-top: 30px
 }
 
 .menu:after {
@@ -195,7 +209,7 @@ a {
 
 .content__row {
     display: flex;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .menu__item a {
@@ -258,8 +272,9 @@ a {
     transition: all 0.5s ease;
 }
 
-.tab__item.active {
+.tab__item {
     display: block;
+    margin-bottom: 100px;
 }
 
 .header__offer img {
@@ -267,6 +282,11 @@ a {
     margin: 0 auto;
     width: 46em;
     max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.header__offer {
+    height: 90vh;
 }
 
 .header__offer p {
@@ -313,6 +333,7 @@ a {
 
 .client__content {
     max-width: 800px;
+    margin: 0 auto;
 }
 
 .client__content h3 {
@@ -469,6 +490,8 @@ a {
 
 .footer__content {
     max-width: 660px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .footer__content h1 {
@@ -553,7 +576,7 @@ a {
         animation-duration: 1s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
-        display: none;
+        /* display: none; */
     }
 }
 
@@ -582,7 +605,7 @@ a {
         margin-top: 0;
     }
     .header__offer {
-        height: 60rem;
+        height: 100vh;
     }
     .tabs {
         margin: 0 auto;
@@ -652,11 +675,9 @@ a {
         text-align: center;
         padding: 0 30px;
     }
-
     .footer__content h1 {
         font-size: 30px;
     }
-
     .footer__content iframe {
         margin: 30px auto;
     }
@@ -697,7 +718,7 @@ a {
         padding-top: 0;
     }
     .social img {
-        height: 25px;
+        height: 20px;
     }
     .header__offer p {
         font-size: 20px;
