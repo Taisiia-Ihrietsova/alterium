@@ -24,6 +24,7 @@ a {
     top: 0;
     left: 0;
     z-index: 11;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 61%, rgba(245, 245, 245, 0) 100%);
 }
 
 header .row {
@@ -282,15 +283,17 @@ a {
     margin: 0 auto;
     width: 46em;
     max-width: 100%;
-    margin-bottom: 50px;
 }
 
 .header__offer {
-    height: 90vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
 }
 
 .header__offer p {
-    margin: 0 auto;
+    margin: 50px auto;
     font-size: 22px;
     max-width: 470px;
     text-align: center;
@@ -299,11 +302,91 @@ a {
     font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+.header__offer-buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0px auto;
+}
+
+
+/* dfg */
+
+.header__offer-buttons a {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em 2em;
+    box-shadow: inset 0 0 0 2px #6e6e6e;
+    color: #6e6e6e;
+    font-size: inherit;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+}
+
+.header__offer-buttons a::before,
+.header__offer-buttons a::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.draw {
+    transition: color 0.25s;
+}
+
+.draw::before,
+.draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.draw::before {
+    top: 0;
+    left: 0;
+}
+
+.draw::after {
+    bottom: 0;
+    right: 0;
+}
+
+.draw:hover {
+    color: #a57f38;
+}
+
+.draw:hover::before,
+.draw:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.draw:hover::before {
+    border-top-color: #a57f38;
+    border-right-color: #a57f38;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.draw:hover::after {
+    border-bottom-color: #a57f38;
+    border-left-color: #a57f38;
+    transition: border-color 0s ease-out 0.2s, width 0.1s ease-out 0.2s, height 0.1s ease-out 0.4s;
+}
+
+
+/* dfghdf */
+
 .title__content {
     font-size: 48px;
-    font-weight: bold;
-    color: #fff;
+    font-weight: 500;
+    color: rgb(216, 215, 215);
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .about__info p {
@@ -311,6 +394,7 @@ a {
     margin: 35px;
     line-height: 1.85;
     text-align: justify;
+    font-weight: 200;
 }
 
 .tab__item.active {
@@ -585,8 +669,12 @@ a {
         padding: 0;
     }
     .header {
-        margin: 2rem auto;
-        padding: 0 13px;
+        padding: 10px 14px;
+    }
+    .header__offer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .header__offer p {
         margin-top: 40px;
@@ -603,9 +691,6 @@ a {
     }
     .content__row {
         margin-top: 0;
-    }
-    .header__offer {
-        height: 100vh;
     }
     .tabs {
         margin: 0 auto;
@@ -689,7 +774,7 @@ a {
         margin-bottom: 0;
     }
     .logo img {
-        height: 4rem;
+        height: 1rem;
     }
     .title__content {
         margin-top: 50px;
