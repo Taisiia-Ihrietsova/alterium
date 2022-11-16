@@ -3,10 +3,8 @@ body {
     margin: 0 auto;
     padding: 0 3%;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
+    color: rgb(216, 215, 215);
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 a {
@@ -16,6 +14,35 @@ a {
 .main-content {
     margin: 0 auto;
     max-width: 1200px;
+}
+
+.logo-title {
+    font-size: 72px;
+    font-family: 'Advent Pro', serif;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 40px;
+    margin-bottom: 50px;
+    transform: rotateY(45deg);
+    animation-name: mainTitle;
+    animation-duration: 4s;
+}
+
+@keyframes mainTitle {
+    from {
+        color: #a57f38;
+    }
+    to {
+        color: #fff;
+    }
+}
+
+.pre-title {
+    font-size: 18px;
+    font-family: 'Quicksand', serif;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 16px;
 }
 
 .header {
@@ -67,7 +94,7 @@ header .row {
 /* burger*/
 
 .burger {
-    height: 26px;
+    height: 24px;
     margin: auto 0;
     display: none;
     width: 40px;
@@ -147,17 +174,15 @@ header .row {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    transition: all 0.5s ease;
     width: 25%;
     min-width: 15em;
     position: fixed;
-    top: 100px;
+    top: 24%;
     z-index: 10;
 }
 
 .tabs {
     margin-left: 200px;
-    margin-top: 30px
 }
 
 .menu:after {
@@ -205,18 +230,15 @@ li,
 a {
     padding: 0;
     margin: 0;
-    transition: all 0.5s ease;
 }
 
 .content__row {
     display: flex;
-    margin-top: 60px;
 }
 
 .menu__item a {
     display: flex;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .menu__item span:first-child {
@@ -286,20 +308,19 @@ a {
 }
 
 .header__offer {
-    height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    height: 100vh;
 }
 
 .header__offer p {
     margin: 50px auto;
-    font-size: 22px;
+    font-size: 20px;
     max-width: 470px;
     text-align: center;
     color: rgb(190, 186, 181);
-    font-weight: 300;
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 100;
 }
 
 .header__offer-buttons {
@@ -383,18 +404,26 @@ a {
 
 .title__content {
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 300;
     color: rgb(216, 215, 215);
     text-align: center;
     margin-bottom: 50px;
 }
 
 .about__info p {
-    font-size: 19px;
-    margin: 35px;
-    line-height: 1.85;
+    font-size: 14px;
+    margin: 30px;
+    line-height: 1.5;
     text-align: justify;
-    font-weight: 200;
+    font-weight: 300;
+}
+
+.about__info ul li {
+    list-style-type: "-  ";
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    margin: 6px 6%;
+    font-size: 14px;
 }
 
 .tab__item.active {
@@ -403,11 +432,17 @@ a {
 
 .about__info {
     display: flex;
+    flex-direction: column;
 }
 
 .about__content {
     display: flex;
     align-items: center;
+}
+
+.about__author {
+    display: flex;
+    gap: 20%;
 }
 
 .about__author img {
@@ -422,7 +457,7 @@ a {
 
 .client__content h3 {
     margin: 40px 0 50px;
-    font-size: 29px;
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -433,7 +468,6 @@ a {
     margin: 0 auto;
     padding: 2rem;
     max-width: 48rem;
-    font-family: sans-serif;
 }
 
 .accordion .accordion-item {
@@ -451,7 +485,7 @@ a {
     width: 100%;
     padding: 1em 0;
     color: #b3afaa;
-    font-size: 1.15rem;
+    font-size: 16px;
     font-weight: 400;
     border: none;
     background: none;
@@ -466,7 +500,7 @@ a {
     width: 100%;
     padding: 1em 0;
     color: #b3afaa;
-    font-size: 1.15rem;
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
     border: none;
@@ -489,6 +523,7 @@ a {
 
 .accordion button .accordion-title {
     padding: 1em 1.5em 1em 0;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .accordion button .icon {
@@ -599,10 +634,6 @@ a {
     color: rgb(201, 196, 196);
 }
 
-.fab {
-    font-family: 'Font Awesome 5 Brands';
-}
-
 .fa-facebook-f:before {
     content: "\f39e";
 }
@@ -653,16 +684,6 @@ a {
 
 
 /* --- RESPONSIVE --- */
-
-@media screen and (min-width: 1201px) {
-    .tab__item {
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        /* display: none; */
-    }
-}
 
 @media screen and (max-width: 1200px) {
     body {
@@ -731,16 +752,11 @@ a {
     .about__info {
         display: flex;
         flex-direction: column;
-        height: 60rem;
     }
     .about__author img {
         max-width: 23rem;
         display: block;
         margin: 30px auto;
-    }
-    .about__info p {
-        max-width: 700px;
-        margin: 35px auto;
     }
     .accordion-container {
         padding: 0;
@@ -748,12 +764,10 @@ a {
         max-width: 690px;
     }
     .services__content {
-        height: 45rem;
         padding-top: 100px;
     }
     .client__content {
         margin: 50px;
-        padding: 12vh 0;
     }
     .footer__content {
         margin: 0 auto;
@@ -768,6 +782,36 @@ a {
     }
 }
 
+@media (max-width: 600px) {
+    .content {
+        padding-top: 0;
+        margin: 10px 3%;
+    }
+    .header__offer {
+        max-width: 90%;
+        margin: 0px auto;
+        height: 100vh;
+    }
+    .main-title {
+        font-size: 52px;
+    }
+    .about__author img {
+        max-width: 18rem;
+        margin: 10px auto;
+    }
+    .about__info p {
+        max-width: 700px;
+        margin: 10px 3%;
+    }
+    .title__content {
+        margin-top: 50px;
+        font-size: 36px;
+    }
+    .services__content {
+        padding-top: 0;
+    }
+}
+
 @media (max-width: 450px) {
     .about__author img {
         max-width: 12rem;
@@ -777,16 +821,12 @@ a {
         height: 1rem;
     }
     .title__content {
-        margin-top: 50px;
-        font-size: 22px;
+        margin-top: 30px;
+        font-size: 24px;
     }
     .about__info p {
-        font-size: 12px;
-        margin: 34px;
+        font-size: 14px;
         text-align: center;
-    }
-    .about__info {
-        height: 48rem;
     }
     .accordion-container {
         margin: 30px;
@@ -799,8 +839,8 @@ a {
         font-size: 14px;
     }
     .services__content {
-        height: 45rem;
         padding-top: 0;
+        font-size: 14px;
     }
     .social img {
         height: 20px;
@@ -811,34 +851,4 @@ a {
     .header__offer img {
         margin-top: 0px;
     }
-    .header__offer {
-        height: 40rem;
-    }
-}
-
-@-webkit-keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateX(20px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
 }
