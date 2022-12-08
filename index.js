@@ -4,24 +4,24 @@ const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 let menuItem = document.querySelectorAll('.menu__item');
 
-// let tabsTrigger = document.querySelectorAll(".active__tabs");
-// tabsTrigger.forEach(function(trigger) {
-//     trigger.addEventListener("click", function() {
-//         const id = this.getAttribute("data-tab");
-//         changeTab(id, trigger);
-//     });
-// });
+let tabsTrigger = document.querySelectorAll(".active__tabs");
+tabsTrigger.forEach(function(trigger) {
+    trigger.addEventListener("click", function() {
+        const id = this.getAttribute("data-tab");
+        changeTab(id, trigger);
+    });
+});
 
-// const changeTab = (id, nextElement) => {
-//     const tabItem = document.querySelector('.tab__item[data-tab="' + id + '"]');
-//     const activeTabsTrigger = document.querySelector(".active__tabs.active");
-//     const activeTabItem = document.querySelector(".tab__item.active");
+const changeTab = (id, nextElement) => {
+    const tabItem = document.querySelector('.tab__item[data-tab="' + id + '"]');
+    const activeTabsTrigger = document.querySelector(".active__tabs.active");
+    const activeTabItem = document.querySelector(".tab__item.active");
 
-//     activeTabsTrigger.classList.remove("active");
-//     nextElement.classList.add("active");
-//     activeTabItem.classList.remove("active");
-//     tabItem.classList.add("active");
-// };
+    activeTabsTrigger.classList.remove("active");
+    nextElement.classList.add("active");
+    activeTabItem.classList.remove("active");
+    tabItem.classList.add("active");
+};
 
 
 //BURGER

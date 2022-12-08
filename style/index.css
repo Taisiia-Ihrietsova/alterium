@@ -57,7 +57,6 @@ a {
 header .row {
     display: flex;
     justify-content: space-between;
-    width: 97%;
     margin: 16px;
 }
 
@@ -66,8 +65,8 @@ header .row {
 
 .social {
     display: flex;
-    justify-content: space-between;
-    width: 5rem;
+    justify-content: center;
+    gap: 20px;
 }
 
 .social a {
@@ -93,9 +92,12 @@ header .row {
 
 /* burger*/
 
+.burger-container {
+    display: none;
+}
+
 .burger {
     height: 24px;
-    margin: auto 0;
     display: none;
     width: 40px;
     position: relative;
@@ -109,7 +111,6 @@ header .row {
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
-    margin-left: 80px;
 }
 
 .burger span {
@@ -292,12 +293,7 @@ a {
     z-index: 1;
     height: 7px;
     margin: 0 22px 0 17px;
-    transition: all 0.5s ease;
-}
-
-.tab__item {
-    display: block;
-    margin-bottom: 100px;
+    /* transition: all 0.5s ease; */
 }
 
 .header__offer img {
@@ -356,9 +352,10 @@ a {
     height: 100%;
 }
 
-.draw {
+
+/* .draw {
     transition: color 0.25s;
-}
+} */
 
 .draw::before,
 .draw::after {
@@ -390,13 +387,13 @@ a {
 .draw:hover::before {
     border-top-color: #a57f38;
     border-right-color: #a57f38;
-    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    /* transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; */
 }
 
 .draw:hover::after {
     border-bottom-color: #a57f38;
     border-left-color: #a57f38;
-    transition: border-color 0s ease-out 0.2s, width 0.1s ease-out 0.2s, height 0.1s ease-out 0.4s;
+    /* transition: border-color 0s ease-out 0.2s, width 0.1s ease-out 0.2s, height 0.1s ease-out 0.4s; */
 }
 
 
@@ -411,7 +408,7 @@ a {
 }
 
 .about__info p {
-    font-size: 14px;
+    font-size: 16px;
     margin: 30px;
     line-height: 1.5;
     text-align: justify;
@@ -423,7 +420,7 @@ a {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     margin: 6px 6%;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .tab__item.active {
@@ -442,12 +439,23 @@ a {
 
 .about__author {
     display: flex;
-    gap: 20%;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .about__author img {
-    max-width: 18em;
     display: block;
+    width: 100%;
+}
+
+.about__author-img {
+    max-width: 300px;
+    flex: 1;
+}
+
+.about__author p {
+    flex: 2;
 }
 
 .client__content {
@@ -572,7 +580,7 @@ a {
 .accordion button[aria-expanded=true]+.accordion-content {
     opacity: 1;
     max-height: 11em;
-    transition: all 200ms linear;
+    /* transition: all 200ms linear; */
     will-change: opacity, max-height;
 }
 
@@ -580,7 +588,7 @@ a {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 200ms linear, max-height 200ms linear;
+    /* transition: opacity 200ms linear, max-height 200ms linear; */
     will-change: opacity, max-height;
 }
 
@@ -689,9 +697,6 @@ a {
     body {
         padding: 0;
     }
-    .header {
-        padding: 10px 14px;
-    }
     .header__offer {
         display: flex;
         flex-direction: column;
@@ -704,9 +709,6 @@ a {
     .header__offer img {
         margin-top: 90px;
     }
-    .title__content {
-        margin-top: 100px;
-    }
     .main-content {
         max-width: 100%;
     }
@@ -718,6 +720,16 @@ a {
     }
     .tab__item {
         margin-left: 0 !important;
+        margin-bottom: 50px;
+    }
+    .social,
+    .logo,
+    .burger-container {
+        width: 190px;
+    }
+    .burger-container {
+        display: flex;
+        justify-content: flex-end;
     }
     .burger {
         display: block;
@@ -727,7 +739,7 @@ a {
         display: none;
     }
     .menu {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         background: rgba(0, 0, 0, 0.9);
@@ -764,7 +776,7 @@ a {
         max-width: 690px;
     }
     .services__content {
-        padding-top: 100px;
+        padding-top: 0;
     }
     .client__content {
         margin: 50px;
@@ -846,7 +858,7 @@ a {
         height: 20px;
     }
     .header__offer p {
-        font-size: 20px;
+        font-size: 18px;
     }
     .header__offer img {
         margin-top: 0px;
