@@ -68,3 +68,28 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+
+const phoneNumber = "+380123456789";
+const isValidPhoneNumber = /^\+380\d{9}$/.test(phoneNumber);
+console.log(isValidPhoneNumber); // true
+
+const invalidPhoneNumber = "+38012345678";
+const isInvalidPhoneNumber = /^\+380\d{9}$/.test(invalidPhoneNumber);
+console.log(isInvalidPhoneNumber); // false
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm('service_smqrrz5', 'template_bwrxngv', this)
+            .then(function() {
+                console.log('SUCCESS!');
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    });
+}
