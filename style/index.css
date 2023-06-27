@@ -446,6 +446,11 @@ a {
     padding: 0 3%;
 }
 
+.about__author-author {
+    color: rgb(216, 215, 215);
+    text-align: right;
+}
+
 .about__author img {
     display: block;
     width: 100%;
